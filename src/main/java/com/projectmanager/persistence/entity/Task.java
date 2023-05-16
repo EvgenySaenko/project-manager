@@ -1,6 +1,5 @@
 package com.projectmanager.persistence.entity;
 
-import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.projectmanager.model.enums.Status;
 import com.projectmanager.model.enums.Type;
 import lombok.Getter;

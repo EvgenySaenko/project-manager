@@ -2,7 +2,6 @@ package com.projectmanager.model.view;
 
 import lombok.*;
 
-import java.util.List;
 
 @Data
 @AllArgsConstructor
@@ -12,6 +11,4 @@ import java.util.List;
 @ToString
 public class ProjectView {
     private String name;
-    private List<SubprojectView> subprojects;
-    private List<TaskView> tasks;
 }

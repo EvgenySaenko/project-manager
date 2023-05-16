@@ -10,6 +10,6 @@ import java.util.Optional;
 
 @Repository
 public interface ProjectRepository extends JpaRepository<Project, Long> {
-    @EntityGraph(value = "Project.tasks",type = EntityGraph.EntityGraphType.FETCH)
-    Optional<Project> findById(Long id);
+//    @EntityGraph(value = "Project.tasks",type = EntityGraph.EntityGraphType.FETCH)
+//    Optional<Project> findById(Long id);
 }

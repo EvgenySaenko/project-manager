@@ -18,9 +18,9 @@ public class Subproject extends PersistableEntity {
     @Column(name = "name")
     private String name;
 
-//    @ManyToOne(fetch = FetchType.LAZY)
-//    @JoinColumn(name = "project_id")
-//    private Project project;
+    @ManyToOne(fetch = FetchType.LAZY)
+    @JoinColumn(name = "project_id")
+    private Project project;
 
     @OneToMany(mappedBy = "subproject", fetch = FetchType.LAZY)
 //    @LazyCollection(LazyCollectionOption.EXTRA)

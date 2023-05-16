@@ -15,14 +15,6 @@ public class ProjectService {
     private final ProjectRepository projectRepository;
     private final ProjectConverter projectConverter;
 
-    public List<ProjectView> getProjectsWithSubprojectsAndTasks() {
-        return projectRepository.findAll().stream().map(projectConverter::convertToProjectView).collect(Collectors.toList());
-    }
-
-
-
-
-
     public List<ProjectView> getProjects(){
         return projectRepository.findAll().stream().map(projectConverter::convertToProjectView).collect(Collectors.toList());
     }
@@ -33,5 +25,8 @@ public class ProjectService {
                 orElseThrow(() -> new RuntimeException("Project with id: " + id + " does not exist"));
     }
 
+//    public List<ProjectView> getProjectsWithSubprojectsAndTasks() {
+//        return projectRepository.findAll().stream().map(projectConverter::convertToProjectView).collect(Collectors.toList());
+//    }
 
 }

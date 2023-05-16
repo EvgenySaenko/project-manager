@@ -11,10 +11,10 @@ import java.util.List;
 @Table(name = "project")
 @Getter
 @Setter
-@NamedEntityGraphs({
-        @NamedEntityGraph(name = "Project.subprojects", attributeNodes = @NamedAttributeNode("subprojects")),
-        @NamedEntityGraph(name = "Project.tasks", attributeNodes = @NamedAttributeNode("tasks"))
-})
+//@NamedEntityGraphs({
+//        @NamedEntityGraph(name = "Project.subprojects", attributeNodes = @NamedAttributeNode("subprojects")),
+//        @NamedEntityGraph(name = "Project.tasks", attributeNodes = @NamedAttributeNode("tasks"))
+//})
 public class Project extends PersistableEntity{
     @Column(name = "name")
     private String name;

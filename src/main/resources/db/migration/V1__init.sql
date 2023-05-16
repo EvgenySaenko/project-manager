@@ -75,38 +75,38 @@ create table task (
      constraint fk_subproject_id foreign key (subproject_id) references subproject (id)
 );
 
-insert into project(name) values ('Проект 1'),
-                                 ('Проект 2'),
-                                 ('Проект 3'),
-                                 ('Проект 4'),
-                                 ('Проект 5');
+insert into project(name) values ('Project 1'),
+                                 ('Project 2'),
+                                 ('Project 3'),
+                                 ('Project 4'),
+                                 ('Project 5');
 
-insert into subproject(name, project_id) values ('Подпроект 1', 1),
-                                                ('Подпроект 2', 1),
-                                                ('Подпроект 3', 2),
-                                                ('Подпроект 4', 3),
-                                                ('Подпроект 5', 3),
-                                                ('Подпроект 5', 3),
-                                                ('Подпроект 5', 4),
-                                                ('Подпроект 6', 5);
+insert into subproject(name, project_id) values ('Subproject 1', 1),
+                                                ('Subproject 2', 1),
+                                                ('Subproject 3', 2),
+                                                ('Subproject 4', 3),
+                                                ('Subproject 5', 3),
+                                                ('Subproject 5', 3),
+                                                ('Subproject 5', 4),
+                                                ('Subproject 6', 5);
 
 insert into task(name, type, status, description, project_id, subproject_id, owner_id)
-values ('Задача 1', 'MANAGER', 'NEW', 'Полное описание задачи, что именно нужно выполнить!', 1, null, 1),
-       ('Задача 2', 'TECHNICAL_SPECIALIST', 'NEW', 'Полное описание задачи, что именно нужно выполнить!', 1, null, 1),
-       ('Задача 3', 'MANAGER', 'NEW', 'Полное описание задачи, что именно нужно выполнить!', null, 2, 1),
-       ('Задача 4', 'TECHNICAL_SPECIALIST', 'NEW', 'Полное описание задачи, что именно нужно выполнить!', null, 2, 2),
-       ('Задача 5', 'TECHNICAL_SPECIALIST', 'NEW', 'Полное описание задачи, что именно нужно выполнить!', null, 2, 2),
-       ('Задача 6', 'MANAGER', 'NEW', 'Полное описание задачи, что именно нужно выполнить!', 2, null, 2),
-       ('Задача 7', 'MANAGER', 'NEW', 'Полное описание задачи, что именно нужно выполнить!', null, 3, 2),
-       ('Задача 8', 'TECHNICAL_SPECIALIST', 'NEW', 'Полное описание задачи, что именно нужно выполнить!', null, 3, 2),
-       ('Задача 1', 'TECHNICAL_SPECIALIST', 'NEW', 'Полное описание задачи, что именно нужно выполнить!', null, 3, 2),
+values ('Task 1', 'MANAGER', 'NEW', 'A complete description of the task that needs to be fixed!', 1, null, 1),
+       ('Task 2', 'TECHNICAL_SPECIALIST', 'NEW', 'A complete description of the task that needs to be fixed!', 1, null, 1),
+       ('Task 3', 'MANAGER', 'NEW', 'A complete description of the task that needs to be fixed!', null, 2, 1),
+       ('Task 4', 'TECHNICAL_SPECIALIST', 'NEW', 'A complete description of the task that needs to be fixed!', null, 2, 2),
+       ('Task 5', 'TECHNICAL_SPECIALIST', 'NEW', 'A complete description of the task that needs to be fixed!', null, 2, 2),
+       ('Task 6', 'MANAGER', 'NEW', 'A complete description of the task that needs to be fixed!', 2, null, 2),
+       ('Task 7', 'MANAGER', 'NEW', 'A complete description of the task that needs to be fixed!', null, 3, 2),
+       ('Task 8', 'TECHNICAL_SPECIALIST', 'NEW', 'A complete description of the task that needs to be fixed!', null, 3, 2),
+       ('Task 1', 'TECHNICAL_SPECIALIST', 'NEW', 'A complete description of the task that needs to be fixed!', null, 3, 2),
 
-       ('Задача 10', 'MANAGER', 'NEW', 'Полное описание задачи, что именно нужно выполнить!', null, 4, 1),
-       ('Задача 11', 'TECHNICAL_SPECIALIST', 'NEW', 'Полное описание задачи, что именно нужно выполнить!', null, 4, 1),
-       ('Задача 12', 'MANAGER', 'NEW', 'Полное описание задачи, что именно нужно выполнить!', 3, null, 2),
-       ('Задача 13', 'TECHNICAL_SPECIALIST', 'NEW', 'Полное описание задачи, что именно нужно выполнить!', 3, null, 1),
-       ('Задача 14', 'TECHNICAL_SPECIALIST', 'NEW', 'Полное описание задачи, что именно нужно выполнить!', 3, null, 1),
-       ('Задача 15', 'MANAGER', 'NEW', 'Полное описание задачи, что именно нужно выполнить!', 4, null, 2),
-       ('Задача 16', 'MANAGER', 'NEW', 'Полное описание задачи, что именно нужно выполнить!', null, 5, 2),
-       ('Задача 17', 'TECHNICAL_SPECIALIST', 'NEW', 'Полное описание задачи, что именно нужно выполнить!', null, 5, 2);
+       ('Task 10', 'MANAGER', 'NEW', 'A complete description of the task that needs to be fixed!', null, 4, 1),
+       ('Task 11', 'TECHNICAL_SPECIALIST', 'NEW', 'A complete description of the task that needs to be fixed!', null, 4, 1),
+       ('Task 12', 'MANAGER', 'NEW', 'A complete description of the task that needs to be fixed!', 3, null, 2),
+       ('Task 13', 'TECHNICAL_SPECIALIST', 'NEW', 'A complete description of the task that needs to be fixed!', 3, null, 1),
+       ('Task 14', 'TECHNICAL_SPECIALIST', 'NEW', 'A complete description of the task that needs to be fixed!', 3, null, 1),
+       ('Task 15', 'MANAGER', 'NEW', 'A complete description of the task that needs to be fixed!', 4, null, 2),
+       ('Task 16', 'MANAGER', 'NEW', 'A complete description of the task that needs to be fixed!', null, 5, 2),
+       ('Task 17', 'TECHNICAL_SPECIALIST', 'NEW', 'A complete description of the task that needs to be fixed!', null, 5, 2);
 

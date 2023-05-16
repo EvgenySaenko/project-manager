@@ -26,8 +26,8 @@ create table users_roles (
 );
 
 
-insert into roles (name) values ('USER'),
-                                ('ADMIN');
+insert into roles (name) values ('ROLE_USER'),
+                                ('ROLE_ADMIN');
 
 
 insert into users (username, password) values
@@ -63,10 +63,12 @@ drop table if exists task cascade;
 create table task (
      id                        bigserial primary key,
      name                      varchar(255) not null,
+     type                      varchar(255) not null,
      status                    varchar(255) not null,
      description               varchar(255) not null,
      project_id                bigint,
      subproject_id             bigint,
+     owner_id                  bigint references users (id),
      created_at                timestamp default current_timestamp,
      updated_at                timestamp default current_timestamp,
      constraint fk_project_id2 foreign key (project_id) references project (id),
@@ -88,23 +90,23 @@ insert into subproject(name, project_id) values ('Подпроект 1', 1),
                                                 ('Подпроект 5', 4),
                                                 ('Подпроект 6', 5);
 
-insert into task(name, status, description, project_id, subproject_id)
-values ('Задача 1', 'NEW', 'Полное описание задачи, что именно нужно выполнить!', 1, null),
-       ('Задача 2', 'NEW', 'Полное описание задачи, что именно нужно выполнить!', 1, null),
-       ('Задача 3', 'NEW', 'Полное описание задачи, что именно нужно выполнить!', null, 2),
-       ('Задача 4', 'NEW', 'Полное описание задачи, что именно нужно выполнить!', null, 2),
-       ('Задача 5', 'NEW', 'Полное описание задачи, что именно нужно выполнить!', null, 2),
-       ('Задача 6', 'NEW', 'Полное описание задачи, что именно нужно выполнить!', 2, null),
-       ('Задача 7', 'NEW', 'Полное описание задачи, что именно нужно выполнить!', null, 3),
-       ('Задача 8', 'NEW', 'Полное описание задачи, что именно нужно выполнить!', null, 3),
-       ('Задача 1', 'NEW', 'Полное описание задачи, что именно нужно выполнить!', null, 3),
+insert into task(name, type, status, description, project_id, subproject_id, owner_id)
+values ('Задача 1', 'MANAGER', 'NEW', 'Полное описание задачи, что именно нужно выполнить!', 1, null, 1),
+       ('Задача 2', 'TECHNICAL_SPECIALIST', 'NEW', 'Полное описание задачи, что именно нужно выполнить!', 1, null, 1),
+       ('Задача 3', 'MANAGER', 'NEW', 'Полное описание задачи, что именно нужно выполнить!', null, 2, 1),
+       ('Задача 4', 'TECHNICAL_SPECIALIST', 'NEW', 'Полное описание задачи, что именно нужно выполнить!', null, 2, 2),
+       ('Задача 5', 'TECHNICAL_SPECIALIST', 'NEW', 'Полное описание задачи, что именно нужно выполнить!', null, 2, 2),
+       ('Задача 6', 'MANAGER', 'NEW', 'Полное описание задачи, что именно нужно выполнить!', 2, null, 2),
+       ('Задача 7', 'MANAGER', 'NEW', 'Полное описание задачи, что именно нужно выполнить!', null, 3, 2),
+       ('Задача 8', 'TECHNICAL_SPECIALIST', 'NEW', 'Полное описание задачи, что именно нужно выполнить!', null, 3, 2),
+       ('Задача 1', 'TECHNICAL_SPECIALIST', 'NEW', 'Полное описание задачи, что именно нужно выполнить!', null, 3, 2),
 
-       ('Задача 10', 'NEW', 'Полное описание задачи, что именно нужно выполнить!', null, 4),
-       ('Задача 11', 'NEW', 'Полное описание задачи, что именно нужно выполнить!', null, 4),
-       ('Задача 12', 'NEW', 'Полное описание задачи, что именно нужно выполнить!', 3, null),
-       ('Задача 13', 'NEW', 'Полное описание задачи, что именно нужно выполнить!', 3, null),
-       ('Задача 14', 'NEW', 'Полное описание задачи, что именно нужно выполнить!', 3, null),
-       ('Задача 15', 'NEW', 'Полное описание задачи, что именно нужно выполнить!', 4, null),
-       ('Задача 16', 'NEW', 'Полное описание задачи, что именно нужно выполнить!', null, 5),
-       ('Задача 17', 'NEW', 'Полное описание задачи, что именно нужно выполнить!', null, 5);
+       ('Задача 10', 'MANAGER', 'NEW', 'Полное описание задачи, что именно нужно выполнить!', null, 4, 1),
+       ('Задача 11', 'TECHNICAL_SPECIALIST', 'NEW', 'Полное описание задачи, что именно нужно выполнить!', null, 4, 1),
+       ('Задача 12', 'MANAGER', 'NEW', 'Полное описание задачи, что именно нужно выполнить!', 3, null, 2),
+       ('Задача 13', 'TECHNICAL_SPECIALIST', 'NEW', 'Полное описание задачи, что именно нужно выполнить!', 3, null, 1),
+       ('Задача 14', 'TECHNICAL_SPECIALIST', 'NEW', 'Полное описание задачи, что именно нужно выполнить!', 3, null, 1),
+       ('Задача 15', 'MANAGER', 'NEW', 'Полное описание задачи, что именно нужно выполнить!', 4, null, 2),
+       ('Задача 16', 'MANAGER', 'NEW', 'Полное описание задачи, что именно нужно выполнить!', null, 5, 2),
+       ('Задача 17', 'TECHNICAL_SPECIALIST', 'NEW', 'Полное описание задачи, что именно нужно выполнить!', null, 5, 2);
 

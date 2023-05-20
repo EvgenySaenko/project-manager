@@ -8,6 +8,7 @@ import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
+import javax.servlet.http.HttpServletResponse;
 import java.util.List;
 
 @RestController
@@ -17,7 +18,7 @@ public class ProjectController {
     private final ProjectService projectService;
 
     @GetMapping
-    public List<ProjectView> getProjects(){
+    public List<ProjectView> getProjects(HttpServletResponse response){
         return projectService.getProjects();
     }
 

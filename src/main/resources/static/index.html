@@ -1,0 +1,54 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="icon" href="static/images/favicon/favicon32.png" type="image/png">
+    <link rel="stylesheet" href="css/index.css"/>
+    <title>Project Manager</title>
+</head>
+
+<body class="page">
+    <header class="header">
+        <h1>Project Manager</h1>
+    </header>
+
+    <main class="content">
+        <section class="column projects">
+            <template id="projects-add">
+                <button class="projects__project" type="button">Project 1</button>
+            </template>
+        </section>
+
+        <section class="column subprojects">
+            <ul class="subprojects__list list">
+                <template id="subprojects-add">
+                    <li class="subprojects__item item">
+                        <button class="subprojects__subproject" type="button"></button>
+                    </li>
+                </template>
+            </ul>
+        </section>
+
+        <section class="column tasks">
+            <ul class="tasks__list list">
+                <template id="tasks-add">
+                    <li class="tasks__item item">
+                        <button class="tasks__tasks" type="button"></button>
+                    </li>
+                </template>
+            </ul>
+        </section>
+
+    </main>
+
+    <footer class="content footer">
+        <p class="footer__author">©2023 Саенко Евгений</p>
+    </footer>
+    <script src="js/components/Api.js"></script>
+    <script src="js/index.js"></script>
+</body>
+</html>

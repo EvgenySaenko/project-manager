@@ -1,6 +1,7 @@
 package com.projectmanager.services;
 
 import com.projectmanager.model.view.ProjectView;
+import com.projectmanager.model.view.ProjectViewFull;
 import com.projectmanager.repositories.ProjectRepository;
 import com.projectmanager.utils.converters.ProjectConverter;
 import lombok.RequiredArgsConstructor;
@@ -19,14 +20,10 @@ public class ProjectService {
         return projectRepository.findAll().stream().map(projectConverter::convertToProjectView).collect(Collectors.toList());
     }
 
-    public ProjectView getProjectById(Long id){
+    public ProjectViewFull getProjectById(Long id){
         return projectRepository.findById(id).
-                map(projectConverter::convertToProjectView).
+                map(projectConverter::convertToProjectViewFull).
                 orElseThrow(() -> new RuntimeException("Project with id: " + id + " does not exist"));
     }
-
-//    public List<ProjectView> getProjectsWithSubprojectsAndTasks() {
-//        return projectRepository.findAll().stream().map(projectConverter::convertToProjectView).collect(Collectors.toList());
-//    }
 
 }

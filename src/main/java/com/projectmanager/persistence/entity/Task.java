@@ -13,7 +13,7 @@ import javax.persistence.*;
 @Setter
 //@NamedQueries({
 //        @NamedQuery(name = "Task.getTasksByProject",
-//                    query = "SELECT t FROM Task t INNER JOIN t.project p  WHERE p.id = :projectId")
+//                    query = "SELECT t FROM Task t INNER JOIN t.project p WHERE p.id = :projectId")
 //})
 public class Task extends PersistableEntity{
     @Column(name = "name")

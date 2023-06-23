@@ -10,5 +10,6 @@ import lombok.*;
 @Builder
 @ToString
 public class ProjectView {
+    private Long id;
     private String name;
 }

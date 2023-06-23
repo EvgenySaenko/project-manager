@@ -18,6 +18,7 @@ public class TaskConverter {
 
     public TaskView convertToTaskView(Task task) {
         return TaskView.builder().
+                    id(task.getId()).
                     name(task.getName()).
                     type(task.getType()).
                     status(task.getStatus()).

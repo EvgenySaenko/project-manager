@@ -1,0 +1,32 @@
+
+.projects__project {
+  text-decoration: none;
+  font-size: 20px;
+  padding: .5em 2em;
+  /* margin: 5px 8px 5px 8px; */
+  outline: none;
+  border-width: 2px 0;
+  border-style: solid none;
+  /* border-color: #ff00f2 #000 #d70668; */
+  border-radius: 4px;
+  /* background-image: linear-gradient(#5c0eec, #b400f5); */
+  background: #5c0eec;
+  transition: 0.2s;
+
+  font-family: "Montserrat Light";
+  line-height: 1.2;
+  color: white;
+}
+
+.projects__project:hover {
+  background: linear-gradient(#5c0eec, #b400f5) #5c0eec;
+  cursor: pointer;
+}
+
+.projects__project:active {
+  background: linear-gradient(#b400f5, #5c0eec) #b400f5;
+}
+
+.projects__project:focus {
+  background: #b400f5;
+}

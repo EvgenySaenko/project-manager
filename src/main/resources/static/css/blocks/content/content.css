@@ -1,0 +1,12 @@
+.content {
+  max-width: 1200px;
+  width: calc(100% - 2*200px);
+  height: calc(100% - 2*500px);
+  border: 0.5px solid white;
+  border-radius: 10px 10px 10px 10px;
+  margin: 0 auto;
+  padding: 10px;
+  display: grid;
+  grid-template-columns: 1fr 1fr 2fr;
+  gap: 10px;
+}

@@ -9,6 +9,7 @@ public class SubprojectConverter {
 
     public SubprojectView convertToSubprojectView(Subproject subproject){
         return SubprojectView.builder().
+                id(subproject.getId()).
                 name(subproject.getName()).
                 build();
     }

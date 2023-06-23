@@ -13,6 +13,7 @@ import lombok.*;
 @Builder
 @ToString
 public class TaskView {
+    private Long id;
     private String name;
     private Type type;
     private Status status;

@@ -1,0 +1,9 @@
+.column {
+  display: grid;
+  grid-template-rows: fit-content();
+
+  height: 900px;
+  border: 0.5px solid white;
+  gap: 5px;
+  overflow-y: scroll;
+}

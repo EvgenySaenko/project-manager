@@ -1,0 +1,35 @@
+
+.subprojects__subproject {
+  text-decoration: none;
+  font-size: 20px;
+  padding: .5em 2em;
+  /* margin: 5px 8px 5px 8px; */
+  outline: none;
+  border-width: 2px 0;
+  border-style: solid none;
+  /* border-color: #ff00f2 #000 #d70668; */
+  border-radius: 4px;
+  /* background-image: linear-gradient(#5c0eec, #b400f5); */
+  /*background: #06a303;*/
+  background: #09a307;
+  transition: 0.2s;
+
+  font-family: "Montserrat Light";
+  line-height: 1.2;
+  color: white;
+}
+
+.subprojects__subproject:hover {
+  /*background: linear-gradient(#09db36, #09dbaa) #09db36;*/
+  background: linear-gradient(#09a307, #09db36) #09a307;
+  cursor: pointer;
+}
+
+.subprojects__subproject:active {
+  /*background: linear-gradient(#09dbaa, #09db36) #09dbaa;*/
+  background: linear-gradient(#09db36, #09a307) #09db36;
+}
+
+.subprojects__subproject:focus {
+  background: #09db36;
+}

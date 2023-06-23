@@ -1,6 +1,7 @@
 package com.projectmanager.controllers;
 
 import com.projectmanager.model.view.ProjectView;
+import com.projectmanager.model.view.ProjectViewFull;
 import com.projectmanager.services.ProjectService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -22,7 +23,7 @@ public class ProjectController {
     }
 
     @GetMapping("/{id}")
-    public ProjectView getProjectById(@PathVariable Long id) {
+    public ProjectViewFull getProjectById(@PathVariable Long id) {
         return projectService.getProjectById(id);
     }
 
